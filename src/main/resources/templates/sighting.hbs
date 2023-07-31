@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet"  href="/css/style.css" />
+    <title>Animals</title>
 </head>
 <body>
+<h1>SIGHTING</h1>
+<form action="/create-sighting" method="post">
+
+    <label>Select Animal </label><br/>
+    <select name="animalId"><br/><br/>
+        {{#each animals}}
+            <option value="{{this.id}}">{{this.text}}</option>
+        {{/each}}
+    </select></br></br>
+    <label> Select Ranger</label><br/>
+    <select name="rangerId"><br/><br/>
+        {{#each rangers}}
+            <option value="{{this.id}}">{{this.text}}</option>
+        {{/each}}
+    </select><br/><br/>
+    <label>Select Health</label><br/>
+    <select id="health" name="health"><br/>
+        <option value="healthy">healthy</option>
+        <option value="ill">ill</option>
+        <option value="okay">okay</option>
+        <label>Select location</label><br/>
+    </select><br/><br/>
+    <label> Select location</label><br/>
+    <select id="location" name="location">
+        <option value="Zone A">Zone A</option>
+        <option value="Near the River">Near the River</option>
+        <option value="NE Quadrant">NE Quadrant</option>
+    </select>
+    <p>Date/Time: <span id="datetime"></span></p>
+
+    <script>
+var dt = new Date();
+document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+</script>
+
+    <div class="fcf-form-group">
+        <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Submit</button>
+    </div>
+
+</form>
 
 </body>
 </html>

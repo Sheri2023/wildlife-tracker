@@ -1,0 +1,34 @@
+body {
+
+  width: 600px;
+          margin: 0, auto;
+          background-image: url('https://cdn.pixabay.com/photo/2018/08/21/23/29/forest-3622519_1280.jpg');
+
+          }
+
+
+
+    div {
+
+      padding-top: 50px;
+
+      padding-right: 30px;
+
+      padding-bottom: 50px;
+
+      padding-left: 80px;
+
+    }
+      .form-items{
+        display:flex;
+        flex-direction:column;
+
+      }
+
+    h1 {
+     color: white;
+    }
+
+   label{
+   color: white;
+}

@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet"  href="/css/style.css" />
+    <title>Animals</title>
 </head>
 <body>
+<h1>Animals</h1>
+<form action="/create-animal" method="post">
+
+    <label>Name</label><br/>
+    <input type="text" id="name" name="animal"><br/><br/>
+
+    <label for="health">State of health:</label>
+    <select id="health" name="health">
+        <option value="healthy">healthy</option>
+        <option value="ill">ill</option>
+        <option value="okay">okay</option>
+    </select>
+    <label for="age">Select age:</label>
+    <select id="age" name="age">
+        <option value="newborn">newborn</option>
+        <option value="young">young</option>
+        <option value="adult">adult</option>
+    </select>
+    <select id="endangered" name="endangered">
+        <option value="yes">yes</option>
+        <option value="No">No</option>
+    </select>
+    <div class="fcf-form-group">
+        <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Submit</button>
+    </div>
+
+</form>
 
 </body>
 </html>
